@@ -5,8 +5,7 @@
 # redistribute it and/or modify it under the same terms of Ruby's license;
 # either the dual license version in 2003, or any later version.
 
-
-require 'iconv'
+require 'iconv' unless String.method_defined?(:encode)
 
 
 module XSD
@@ -17,7 +16,11 @@ class IconvCharset
     iconv = Iconv.new(to, from)
     out = ""
     begin
-      out << iconv.iconv(str)
+      if String.method_defined?(:encode)
+        str.encode(to)
+      else
+        out << iconv.iconv(str)
+      end
     rescue Iconv::IllegalSequence => e
       out << e.success
       ch, str = e.failed.split(//, 2)
