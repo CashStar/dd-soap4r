@@ -1,0 +1,16 @@
+PATH
+  remote: .
+  specs:
+    mumboe-soap4r (1.5.8.5)
+      httpclient (>= 2.1.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    httpclient (2.2.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mumboe-soap4r!
