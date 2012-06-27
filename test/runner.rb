@@ -1,3 +1,5 @@
+$LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'lib')
+
 require 'test/unit'
 
 rcsid = %w$Id: runner.rb 1751 2007-05-02 08:15:55Z nahi $
