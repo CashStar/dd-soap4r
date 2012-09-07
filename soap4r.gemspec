@@ -2,7 +2,7 @@
 # Walter Korman (shaper@waywardgeeks.org)
 
 require 'rubygems'
-SPEC = Gem::Specification.new do |s|
+SOAP4R_SPEC = Gem::Specification.new do |s|
   s.name = "dd-soap4r"
   s.version = "1.5.8.5"
   s.date = "2009-12-08"
